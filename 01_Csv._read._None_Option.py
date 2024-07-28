@@ -9,7 +9,9 @@ if __name__=="__main__":
     fileName="easySample.csv"
     file=os.path.join(path,fileName)
 
-    df=pd.read_csv(file,index_col='ID')
+    df=pd.read_csv(file)
+
+    print(df)
 
     print("INDEX 출력")
     print(df.index) # index는 속성
