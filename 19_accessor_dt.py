@@ -31,7 +31,7 @@ df01['요일']=df01['birth'].dt.weekday
 df01['요일']=df01['요일'].replace(weekNum_To_Text)
 print(df01)
 
-# timedelta -> 요일 표시
+# timestamp -> 요일 표시
 df02['요일']=df02['birth'].apply(change_weekdayText)
 print(df02)
 
