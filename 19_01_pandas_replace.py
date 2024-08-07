@@ -1,6 +1,21 @@
 import pandas as pd
 import numpy as np
 
+file='.\data\easySample2.csv'
+
+df=pd.read_csv(file,index_col='ID')
+
+df=df.replace(r'^\s+$',np.nan,regex=True)
+
+df01=df[['pname','english','japanese','chinese']]
+print(df01)
+
+df02=df01.fillna(value={'english':0,'japanese':4,'chinese':5})
+print(df02)
+
+df03=df01.replace(np.nan,{'english':0,'japanese':4,'chinese':5})
+print(df03)
+
 
 sr=pd.Series([1,2,3,4,5])
 
